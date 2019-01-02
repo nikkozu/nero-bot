@@ -1,0 +1,38 @@
+{
+  "name": "nero_claudius",
+  "version": "1.0.0",
+  "description": "CreamPay server numba wan servant.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "engines": {
+    "node": "8.11.3"
+  },
+  "author": "Akizuki Masami#9363",
+  "license": "MIT",
+  "keywords": [
+    "creampaybot",
+    "discord.js",
+    "node",
+    "servant"
+  ],
+  "dependencies": {
+    "discord.js": "^11.4.2",
+    "express": "^4.16.4",
+    "fs": "^0.0.2",
+    "moment": "^2.23.0",
+    "ms": "^2.1.1",
+    "ordinal": "1.0.2",
+    "superagent": "^4.0.0",
+    "chalk": "^2.4.1",
+    "sqlite3": "^4.0.4",
+    "canvas": "^2.2.0",
+    "canvas-constructor": "^2.1.0",
+    "jimp": "^0.6.0",
+    "moment-duration-format": "^2.2.2",
+    "gifencoder": "^2.0.0",
+    "node-superfetch": "^0.1.9"
+  }
+}
