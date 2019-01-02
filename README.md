@@ -1,0 +1,2 @@
+# nero-bot
+Discord bot
