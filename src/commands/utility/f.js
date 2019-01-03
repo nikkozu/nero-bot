@@ -5,7 +5,7 @@ const path = require("path");
 const SQL = require('sqlite3').verbose();
 
 exports.run = async (client, msg, args, color) => {
-    const database = new SQL.Database(path.join(__dirname, '..', '..', 'databases', 'f-total.db'));
+    const database = new SQL.Database('./src/databases/f-total.db');
     var db = await database;
 
     const date = moment(new Date()).format("YYYY-MM-DD");
@@ -19,14 +19,14 @@ exports.run = async (client, msg, args, color) => {
         try {
             var fTotal = rows.total + 1;
             if (!rows) {
-                db.run("INSERT INTO main (date, total) VALUES (?, ?)", [date, 0]);
+                db.run("INSERT INTO main (date, total) VALUES (?, ?)", [date, 1]);
             } else {
                 db.run(`UPDATE main SET total = '${fTotal}' WHERE date = "${date}"`);
             }
         } catch (e) {
             if (e.message === "Cannot read property 'total' of undefined") {
-                db.run("INSERT INTO main (date, total) VALUES (?, ?)", [date, 0]);
-                fTotal = 0
+                db.run("INSERT INTO main (date, total) VALUES (?, ?)", [date, 1]);
+                fTotal = 1
             } else {
                 console.error(e)
             }
